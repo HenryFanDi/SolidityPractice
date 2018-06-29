@@ -13,4 +13,4 @@ const source = fs.readFileSync(inboxPath, 'utf8');
 
 // Compile will pass in our source code and then we have to specify the number of different contracts that we're attempting to compile
 // Exporting that big giant object that has the contracts property and then a list of contracts that were compiled
-module.exports = solc.compile(source, 1);
+module.exports = solc.compile(source, 1).contracts[':Inbox'];
